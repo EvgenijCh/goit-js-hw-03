@@ -14,7 +14,7 @@ user.premium = false;
 const keys = Object.keys(user);
 
 for (const key of keys) {
-  console.log(key, ':', user[key]);
+  console.log(`${key}: ${user[key]}`);
 }
 
 //   добавляет поле mood со значением 'happy'

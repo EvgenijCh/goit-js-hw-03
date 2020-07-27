@@ -6,16 +6,15 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-function calculateTotalPrice(arr, productName) {
-  let total = 0;
-  for (const item of arr) {
-    let name = item.name;
-    if (productName === name) {
-      total += item.price * item.quantity;
+const calculateTotalPrice = function (allProdcuts, productName) {
+  let totalPrice = 0;
+  for (const product of products) {
+    if (productName === product.name) {
+      totalPrice = product.price * product.quantity;
     }
   }
-  return `${productName} - ${total}`;
-}
+  return totalPrice;
+};
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
